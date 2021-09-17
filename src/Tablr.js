@@ -1,5 +1,5 @@
 import {useEffect} from 'react'
-import styles from './tablr.module.css'
+import styles from './styles/tablr.module.css'
 import PropTypes from 'prop-types'
 export const Tablr = ({  
   rows,

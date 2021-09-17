@@ -1,4 +1,4 @@
-import styles from './navbar.module.css'
+import styles from './styles/navbar.module.css'
 import PropTypes from 'prop-types'
 
 export const Navbar = ({
@@ -17,7 +17,7 @@ export const Navbar = ({
         tall: '100px'
     }
     return (
-        <div className={styles.nav} 
+        <div className={styles.nav}
         style={{
             backgroundColor: navBackgroundColor,
             fontSize: fonts[wordSize],

@@ -1,0 +1,38 @@
+.empty_container{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.loading_container{
+    display: grid;
+    grid-template-rows: repeat(auto-fit,50px);
+    row-gap: 20px;
+}
+.loading_bar{
+    display: block;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: .5;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.bar{
+    display: flex;
+    width: inherit;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    background-color: white;
+    color: black
+}
