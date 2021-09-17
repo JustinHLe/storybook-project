@@ -1,26 +1,28 @@
 import styles from './styles/stack.module.css'
 import PropTypes from 'prop-types'
 
-export const Stack = ({empty,loading, children}) => {
+export const Stack = ({empty,loading, children, gap}) => {
     //loading state
     const loadingItem = (
         <div className = {styles.loading_bar}></div>
     )
-    if(loading){
+    const gapSize = {
+        noGap: '0px',
+        normalGap: '20px',
+        largeGap: '40px'
+    }
+    if(loading && children.length > 0){
         return(
-            <div className = {styles.loading_container}>
-                {loadingItem}
-                {loadingItem}
-                {loadingItem}
-                {loadingItem}
-                {loadingItem}
-                {loadingItem}
+            <div className = {styles.loading_container} style={{rowGap: gapSize[gap]}}>
+                {children.map((item,i)=>{
+                    return loadingItem
+                })}
             </div>
         )
     }
 
     //empty state
-    if(empty && !loading){
+    if((empty || children.length === 0)){
         return(
             <div className={styles.empty_container}>
                 Your Stack is Empty :(
@@ -28,8 +30,9 @@ export const Stack = ({empty,loading, children}) => {
         )
     }
 
+
     return(
-        <div className = {styles.loading_container}>
+        <div className = {styles.loading_container} style={{rowGap: gapSize[gap]}}>
             {children}
         </div>
     )
@@ -39,4 +42,5 @@ export const Stack = ({empty,loading, children}) => {
 Stack.propTypes = {
     empty: PropTypes.bool,
     loading: PropTypes.bool,
+    gap: PropTypes.oneOf(['noGap', 'normalGap', 'largeGap'])
 }

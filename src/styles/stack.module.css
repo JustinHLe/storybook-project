@@ -9,7 +9,6 @@
 .loading_container{
     display: grid;
     grid-template-rows: repeat(auto-fit,50px);
-    row-gap: 20px;
 }
 .loading_bar{
     display: block;

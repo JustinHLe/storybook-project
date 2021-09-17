@@ -5,7 +5,7 @@ export default {
     title: 'Stk Component/Stack',
     component: Stack,
     argTypes: {
-        numberOfRows: { type: 'number', defaultValue: 0},
+        numberOfRows: { type: 'number', defaultValue: 1},
         handleClick: { action: 'handleClick'}
     }
 }
@@ -16,7 +16,7 @@ const Template = ({handleClick, numberOfRows, ...args}) => (
             <div key ={n} className = {styles.bar}>
                 {n+1}
                 <input type="checkbox" onClick={handleClick}></input>
-                </div>
+            </div>
             )
     })}
 </Stack>
@@ -26,6 +26,7 @@ export const Empty = Template.bind({})
 Empty.args = ({
     loading: false,
     empty: true,
+    gap: 'normalGap'
 })
 
 
@@ -33,11 +34,12 @@ export const Loading = Template.bind({})
 Loading.args = ({
     loading: true,
     empty: true,
+    gap: 'normalGap'
 })
 
 export const Filled = Template.bind({})
 Filled.args = ({
     loading: false,
     empty: false,
-    
+    gap: 'normalGap'
 })
