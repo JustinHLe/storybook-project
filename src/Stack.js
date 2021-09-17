@@ -11,17 +11,6 @@ export const Stack = ({empty,loading, children, gap}) => {
         normalGap: '20px',
         largeGap: '40px'
     }
-    if(loading && children.length > 0){
-        return(
-            <div className = {styles.loading_container} style={{rowGap: gapSize[gap]}}>
-                {children.map((item,i)=>{
-                    return loadingItem
-                })}
-            </div>
-        )
-    }
-
-    //empty state
     if((empty || children.length === 0)){
         return(
             <div className={styles.empty_container}>
@@ -29,8 +18,15 @@ export const Stack = ({empty,loading, children, gap}) => {
             </div>
         )
     }
-
-
+    if(loading && children.length > 0){
+        return(
+            <div className = {styles.loading_container} style={{rowGap: gapSize[gap]}}>
+                {children.map((item,i)=>{
+                    return  loadingItem
+                })}
+            </div>
+        )
+    }
     return(
         <div className = {styles.loading_container} style={{rowGap: gapSize[gap]}}>
             {children}

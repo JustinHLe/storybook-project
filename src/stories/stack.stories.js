@@ -5,10 +5,13 @@ export default {
     title: 'Stk Component/Stack',
     component: Stack,
     argTypes: {
-        numberOfRows: { type: 'number', defaultValue: 1},
+        numberOfRows: { type: 'select', options: [0,1,2,3,4,5,6], defaultValue: 0},
         handleClick: { action: 'handleClick'}
     }
 }
+
+
+
 const Template = ({handleClick, numberOfRows, ...args}) => (
 <Stack {...args}>
     {[...Array(numberOfRows).keys()].map(n=>{
@@ -28,12 +31,13 @@ Empty.args = ({
     empty: true,
     gap: 'normalGap'
 })
+Empty.parameters = { controls: { exclude: ['numberOfRows', 'loading','gap'] } }
 
 
 export const Loading = Template.bind({})
 Loading.args = ({
     loading: true,
-    empty: true,
+    empty: false,
     gap: 'normalGap'
 })
 
