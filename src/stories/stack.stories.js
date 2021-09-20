@@ -12,13 +12,13 @@ export default {
 
 
 
-const Template = ({handleClick, numberOfRows, ...args}) => (
-<Stack {...args}>
+const Template = ({handleClick, numberOfRows, loading, ...args}) => (
+<Stack loading = {loading} {...args}>
     {[...Array(numberOfRows).keys()].map(n=>{
             return (
-            <div key ={n} className = {styles.bar}>
-                {n+1}
-                <input type="checkbox" onClick={handleClick}></input>
+            <div key ={n} className = {loading ? styles.loading_bar : styles.bar}>
+                <span className = {loading ? styles.hidden : styles.num}>{n+1}</span>
+                <input type="checkbox" className = {loading ? styles.hidden : styles.checkbox} onClick={handleClick}></input>
             </div>
             )
     })}
