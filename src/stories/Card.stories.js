@@ -18,9 +18,11 @@ Base.args = ({
     header: true,
     multiAction: false,
     bodyPadding: 'normalPadding',
-    bodyText: "This description goes directly into the body and takes up space"
+    bodyText: "This is the card description. Anything can go into the card description and take up space",
+    loading: false,
+    mobile: false,
+    dataTable: false
 })
-
 export const OnlyHeader = Template.bind({})
 OnlyHeader.args = ({
     ...Base.args,
@@ -39,9 +41,23 @@ NoHeader.args = ({
     ...Base.args,
     header: false
 })
-
 export const NoFooter = Template.bind({})
 NoFooter.args = ({
     ...Base.args,
     footer: false
+})
+export const Loading = Template.bind({})
+Loading.args = ({
+    ...Base.args,
+    loading: true
+})
+export const Mobile = Template.bind({})
+Mobile.args = ({
+    ...Base.args,
+    mobile: true
+})
+export const DataTable = Template.bind({})
+DataTable.args = ({
+    ...Base.args,
+    dataTable: true
 })
