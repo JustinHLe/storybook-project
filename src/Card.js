@@ -70,7 +70,7 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                                 <div className={styles.contact_img}/>
                             </span>
                             <span>
-                                <h3 className={styles.header_text}>Contacts</h3>
+                                <h3 className={styles.header_text}>Contacts (1)</h3>
                             </span>
                             <div className={multiAction ? styles.hidden : styles.action_container}>
                                 <span className={styles.link} onClick={handleClick}>New</span>
@@ -113,23 +113,101 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                                 <div className={styles.contact_img}/>
                             </span>
                             <span>
-                                <h3 className={styles.header_text}>Contacts</h3>
+                                <h3 className={styles.header_text}>Contacts (3)</h3>
                             </span>
                             <div className={multiAction ? styles.hidden : styles.action_container}>
                                 <span className={styles.link} onClick={handleClick}>New</span>
                             </div>
                         </div>
                 </header>
-                <div>
-                    <ul className={body ? styles.tile_body : styles.hidden}>
-                        <li>
-
+                <div className={body ? styles.tile_body : styles.hidden}>
+                    <ul className={styles.tile_list}>
+                        <li className={styles.tile_item}>
+                        <div className={styles.grid_wrapper}>
+                                <div>
+                                    <div className={styles.contact_img_record}></div>
+                                </div>
+                                <div className={styles.nested_grid_item}>
+                                    <div className={styles.nested_grid1}>
+                                        <div className={styles.link_record}>Related Record Title 1</div>
+                                    </div>
+                                    <div className={styles.action_dropdown_record}>
+                                        <div className={styles.triangle}></div>
+                                    </div>
+                                    <div className={styles.nested_grid2}>
+                                        First Label:
+                                    </div>
+                                    <div className={styles.nested_grid3}>
+                                        Description for first label
+                                    </div>
+                                    <div className={styles.nested_grid2}>
+                                        Second Label:
+                                    </div>
+                                    <div className={styles.nested_grid3}>
+                                        Description for second label
+                                    </div>
+                                    <div>
+                                </div>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-
+                        <li className={styles.tile_item}>
+                            <div className={styles.grid_wrapper}>
+                                <div>
+                                    <div className={styles.contact_img_record}></div>
+                                </div>
+                                <div className={styles.nested_grid_item}>
+                                    <div className={styles.nested_grid1}>
+                                        <div className={styles.link_record}>Related Record Title 2</div>
+                                    </div>
+                                    <div className={styles.action_dropdown_record}>
+                                        <div className={styles.triangle}></div>
+                                    </div>
+                                    <div className={styles.nested_grid2}>
+                                        First Label:
+                                    </div>
+                                    <div className={styles.nested_grid3}>
+                                        Description for first label
+                                    </div>
+                                    <div className={styles.nested_grid2}>
+                                        Second Label:
+                                    </div>
+                                    <div className={styles.nested_grid3}>
+                                        Description for second label
+                                    </div>
+                                    <div>
+                                </div>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            
+                        <li className={styles.tile_item}>
+                        <div className={styles.grid_wrapper}>
+                                <div>
+                                    <div className={styles.contact_img_record}></div>
+                                </div>
+                                <div className={styles.nested_grid_item}>
+                                    <div className={styles.nested_grid1}>
+                                        <div className={styles.link_record}>Related Record Title 3</div>
+                                    </div>
+                                    <div className={styles.action_dropdown_record}>
+                                        <div className={styles.triangle}></div>
+                                    </div>
+                                    <div className={styles.nested_grid2}>
+                                        First Label:
+                                    </div>
+                                    <div className={styles.nested_grid3}>
+                                        Description for first label
+                                    </div>
+                                    <div className={styles.nested_grid2}>
+                                        Second Label:
+                                    </div>
+                                    <div className={styles.nested_grid3}>
+                                        Description for second label
+                                    </div>
+                                    <div>
+                                </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
