@@ -21,7 +21,8 @@ Base.args = ({
     bodyText: "This is the card description. Anything can go into the card description and take up space",
     loading: false,
     mobile: false,
-    dataTable: false
+    dataTable: false,
+    dataTiles: false
 })
 export const OnlyHeader = Template.bind({})
 OnlyHeader.args = ({
@@ -60,4 +61,9 @@ export const DataTable = Template.bind({})
 DataTable.args = ({
     ...Base.args,
     dataTable: true
+})
+export const DataTiles = Template.bind({})
+DataTiles.args = ({
+    ...Base.args,
+    dataTiles: true
 })

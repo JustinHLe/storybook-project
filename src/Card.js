@@ -2,7 +2,8 @@ import styles from './styles/card.module.css'
 import PropTypes from 'prop-types'
 
 
-export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, bodyText, loading, mobile, dataTable}) => {
+export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, bodyText, loading, mobile, 
+    dataTable, dataTiles}) => {
     //only header
     const padding = {
         noPadding: '0',
@@ -76,7 +77,7 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                             </div>
                         </div>
                 </header>
-                    <div className={styles.data_body}>
+                    <div className={body ? styles.data_body : styles.hidden}>
                         <table cellSpacing="0" className={styles.table}>
                             <tr align="left" className={styles.header_row}>
                                 <th className={styles.header_row_elem}>Name</th>
@@ -85,7 +86,7 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                                 <th className={styles.header_row_elem}>Email</th>
                             </tr>
                             <tr align="left" className={styles.data_row}>
-                                <td className={styles.data_row_elem}>Master Chief</td>
+                                <td className={styles.data_row_elem}><span onClick={handleClick} className={styles.link}>Master Chief</span></td>
                                 <td className={styles.data_row_elem}>ONI</td>
                                 <td className={styles.data_row_elem}>Petty Officer</td>
                                 <td className={styles.data_row_elem}>MasterChief@gmail.com</td>
@@ -100,6 +101,46 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                     </footer>
             </div>
         </article> 
+        )
+    }
+    if(dataTiles){
+        return(
+            <article id = "data tiles card">
+            <div className={styles.card_container}>
+                <header>
+                        <div className={header ? styles.header : styles.hidden}>
+                            <span>
+                                <div className={styles.contact_img}/>
+                            </span>
+                            <span>
+                                <h3 className={styles.header_text}>Contacts</h3>
+                            </span>
+                            <div className={multiAction ? styles.hidden : styles.action_container}>
+                                <span className={styles.link} onClick={handleClick}>New</span>
+                            </div>
+                        </div>
+                </header>
+                <div>
+                    <ul className={body ? styles.tile_body : styles.hidden}>
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+                    <hr className={footer && bodyText && header ? styles.line : styles.hidden}/>
+                    <footer>
+                        <div className={footer && bodyText ? styles.footer : styles.hidden}>
+                            <a className={styles.link} onClick={handleClick}>View All</a>
+                        </div>
+                    </footer>
+            </div>
+        </article>   
         )
     }
     if(!body && !footer && header && !multiAction){
