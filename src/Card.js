@@ -129,9 +129,9 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                                 </div>
                                 <div className={styles.nested_grid_item}>
                                     <div className={styles.nested_grid1}>
-                                        <div className={styles.link_record}>Related Record Title 1</div>
+                                        <div className={styles.link_record} onClick={handleClick}> Related Record Title 1</div>
                                     </div>
-                                    <div className={styles.action_dropdown_record}>
+                                    <div className={styles.action_dropdown_record} onClick={handleClick}>
                                         <div className={styles.triangle}></div>
                                     </div>
                                     <div className={styles.nested_grid2}>
@@ -158,9 +158,9 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                                 </div>
                                 <div className={styles.nested_grid_item}>
                                     <div className={styles.nested_grid1}>
-                                        <div className={styles.link_record}>Related Record Title 2</div>
+                                        <div className={styles.link_record} onClick={handleClick}>Related Record Title 2</div>
                                     </div>
-                                    <div className={styles.action_dropdown_record}>
+                                    <div className={styles.action_dropdown_record} onClick={handleClick}>
                                         <div className={styles.triangle}></div>
                                     </div>
                                     <div className={styles.nested_grid2}>
@@ -187,9 +187,9 @@ export const Card = ({footer,header,body,multiAction, handleClick, bodyPadding, 
                                 </div>
                                 <div className={styles.nested_grid_item}>
                                     <div className={styles.nested_grid1}>
-                                        <div className={styles.link_record}>Related Record Title 3</div>
+                                        <div className={styles.link_record} onClick={handleClick}> Related Record Title 3</div>
                                     </div>
-                                    <div className={styles.action_dropdown_record}>
+                                    <div className={styles.action_dropdown_record} onClick={handleClick}>
                                         <div className={styles.triangle}></div>
                                     </div>
                                     <div className={styles.nested_grid2}>

@@ -251,6 +251,7 @@
     height: 20px;
     width: 20px;
     grid-column: 4;
+    cursor: pointer;
 }
 
 .nested_grid1{
@@ -277,4 +278,30 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 1030px) {
+    .tile_list{
+        flex-direction: column;
+    }
+    .grid_wrapper{
+        display: grid;
+        height: 70px;
+        grid-template-columns: 30px auto;
+        column-gap: 20px;
+    }
+    .nested_grid_item{
+        grid-template-columns: 1fr 2fr 40px;
+        grid-auto-rows: 20px
+    }
+    .action_dropdown_record{
+        width: 30px;
+        height: 23px;
+    }
+    .triangle{
+        border-top: 8px solid gray;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent; 
+    }
 }
