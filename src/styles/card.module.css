@@ -85,7 +85,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-    background: url('../icon.png');
+    background: url('../img/icon.png');
     background-size: 100%;
     border: 0;
     margin-left: 20px;
@@ -94,7 +94,7 @@
     display: flex;
     width: 30px;
     height: 30px;
-    background: url('../contact.png');
+    background: url('../img/contact.png');
     background-size: 100%;
     border: 0;
     margin-left: 20px;
@@ -108,7 +108,7 @@
 .empty_body_image{
     width: 200px;
     height: 100px;
-    background: url('../empty.jpeg');
+    background: url('../img/empty.jpeg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -238,7 +238,7 @@
     display: flex;
     width: 30px;
     height: 30px;
-    background: url('../contact.png');
+    background: url('../img/contact.png');
     background-size: 100%;
     border: 0;
 }
