@@ -10,5 +10,19 @@ const Template = args => <Accordian {...args} />
 
 export const Default = Template.bind({})
 Default.args=({
-    action: false
+    action: false,
+    arrayText: [
+    {
+        title : "headerOne", 
+        content : "hi"
+    }, 
+    {
+        title : "headerTwo",
+        content : "bye"
+    },
+    {
+        title : "headerThree",
+        content : "cya"
+    }
+]
 })

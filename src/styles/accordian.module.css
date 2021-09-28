@@ -13,12 +13,7 @@
     border: 2px solid #e3e3e3e3;
     flex-direction: column;
 }
-.accordian_wrapper > div{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-.accordian_wrapper > div > div:first-child{
+.row{
     display: flex;
     height: 40px;
     width: 50vw;
@@ -30,14 +25,17 @@
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
 }
-.accordian_wrapper > div > div:last-child{
-    display: flex;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
+.info_container{
+    pointer-events: none;
+}
+.hidden{
+    display: none;
+}
+.shown{
+    display: flex;    
     align-items: flex-start;
+    height: auto;
     width: 50vw;
     padding: 0 10px;
     margin: 0 10px;
@@ -50,6 +48,15 @@
     display: inline-block;
     padding: 3px;
     transform: rotate(-45deg);
+    margin-right: 10px;
+    transition: all 1s;
+}
+.arrow_dropdown{
+    border: solid rgb(37, 36, 36);
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
     margin-right: 10px;
     transition: all 1s;
 }
