@@ -27,7 +27,7 @@ export const Accordian = ({handleClick, action, arrayText, nested, innerArrayTex
                         <div className={styles.row} id={`outer ${i}`} key = {i} onClickCapture={(e)=>{showContent(e,i)}}>
                             <div className={styles.info_container}>
                                 <div className={styles.arrow} id = "test" style={{pointerEvents: 'none'}} style={{pointerEvents: 'none'}}></div>
-                                <div style={{pointerEvents: 'none', overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", display: 'block', width: '43vw'}}>{title}</div>
+                                <div className={styles.title}>{title}</div>
                                 <div className={action ? styles.box : null} onClick={handleClick}>
                                     <div className={action ? styles.triangle : null}></div>
                                 </div>
@@ -40,7 +40,7 @@ export const Accordian = ({handleClick, action, arrayText, nested, innerArrayTex
                                             <div className={styles.inner_row} id = {`inner ${i}`} key={itr} onClickCapture={(e)=>{showContent(e,i)}}>
                                                 <div className={styles.info_container}>
                                                     <div className={styles.arrow} id = "test" style={{pointerEvents: 'none'}} style={{pointerEvents: 'none'}}></div>
-                                                    <div style={{pointerEvents: 'none', overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", display: 'block', width: '40vw'}}>{title}</div>
+                                                    <div style={{pointerEvents: 'none', overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", display: 'block', width: '33vw'}}>{title}</div>
                                                 </div>
                                                 <div className={styles.hidden}>
                                                     <p>{content}</p>
@@ -68,7 +68,7 @@ export const Accordian = ({handleClick, action, arrayText, nested, innerArrayTex
                         <div className={styles.row} id={`outer ${i}`} key = {i} onClickCapture={(e)=>{showContent(e,i)}}>
                             <div className={styles.info_container}>
                                 <div className={styles.arrow} id = "test" style={{pointerEvents: 'none'}} style={{pointerEvents: 'none'}}></div>
-                                <div style={{pointerEvents: 'none', overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", display: 'block', width: '43vw'}}>{title}</div>
+                                <div className={styles.title}>{title}</div>
                                 <div className={action ? styles.box : null} onClick={handleClick}>
                                     <div className={action ? styles.triangle : null}></div>
                                 </div>
